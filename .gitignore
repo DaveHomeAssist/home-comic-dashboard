@@ -1,3 +1,22 @@
+# macOS
 .DS_Store
+
+# Node (defensive; this is a pure UMD static site today)
 node_modules/
 *.log
+npm-debug.log*
+
+# Environment and local overrides
+.env
+.env.*
+!.env.example
+*.local
+*.local.*
+
+# Editor and IDE
+.vscode/
+.idea/
+*.swp
+
+# Agent / tooling local state
+.claude/
