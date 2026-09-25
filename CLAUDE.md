@@ -38,3 +38,16 @@ Companion to the engineer-facing Lovelace Overview on `dominic`. This dashboard 
 | 002 | P2 | open | Solar data is mocked | No solar integration in HA; either mock stays or add real PV monitoring |
 | 003 | P3 | open | Day/night auto-switch | Currently toggled via `data-mode` attr; wire to `sun.sun` below-horizon event |
 | 004 | P3 | open | Calendar hardcoded to Phillies | Already have `calendar.phillies_2026` in HA; wire live |
+
+## Status naming
+
+Name work with one string everywhere (chat status title, session title, Notion
+Status Check Runs "Human Name"):
+
+`Project | 🚦 | Phase | Title → state, reason | MM-DD`
+
+- 🚦: 🟢 complete and verified · 🟡 partial · 🔴 not started, blocked or failed · ⚪ unverifiable.
+  Add ⏳ scheduled, 🙋 awaiting Dave or 🚧 blocked to 🟡/🔴/⚪, never to 🟢.
+- Phase: Research, Design, Build, Audit or Scheduled. MM-DD: date of the latest light change.
+- Every light change gets a new name: a `RENAME:` line in chat and the Notion row updated.
+- Canonical source: https://github.com/DaveHomeAssist/skills/blob/master/status-naming.md
